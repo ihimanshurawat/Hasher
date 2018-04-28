@@ -1,6 +1,6 @@
 # Hasher
 A Simple, Light Weight and Easy to Use Hashing Library.
-You can Easily Hash MD5, SHA-1, SHA-256, SHA-384, SHA-512 with a ease.
+You can Easily Hash using MD5, SHA-1, SHA-256, SHA-384, or SHA-512 with ease.
 ! This Library is Written in Kotlin !
 
 # How to Use
