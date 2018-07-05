@@ -20,7 +20,7 @@ class Hasher {
         try {
             // Create Hash Type
             val digest = java.security.MessageDigest
-                    .getInstance(hashType)
+                    .getInstance(getHashType(hashType))
             digest.update(value.toByteArray())
             val messageDigest = digest.digest()
 
@@ -41,5 +41,34 @@ class Hasher {
         return ""
     }
 
+    private fun getHashType(hashType: String): String? {
+
+        //Switch Case for Returning Appropriate HashType
+        when(hashType){
+
+            MD5 -> {
+                return MD5
+            }
+            SHA_1 ->{
+                return SHA_1
+            }
+            SHA_256 ->{
+                return SHA_256
+            }
+
+            SHA_384 -> {
+                return SHA_384
+            }
+
+            SHA_512 -> {
+                return SHA_512
+            }
+
+
+        }
+
+        return MD5
+
+    }
 
 }
