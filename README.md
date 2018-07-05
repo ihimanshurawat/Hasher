@@ -16,7 +16,12 @@ ob.hash(value,type);
 ```
 Example
 ```
-ob.hash("Hello",ob.getSHA_1());
+~~ob.hash("Hello",ob.getSHA_1());~~
+This has been replaced with New Format 
+
+New Format 
+ob.hash("Hello",Hasher.SHA_1);
+
 ```
 It will return a SHA-1 Encoded String 
 
@@ -30,7 +35,9 @@ and use
 //Default Hashing is MD5
 ob.hash(value)
 //With Two Arguments
-ob.hash(value, ob.SHA_512)
+~~ob.hash(value, ob.SHA_512)~~
+The above code has been updated to
+ob.hash(value,Hasher.SHA_512)
 ```
 
 # Download
