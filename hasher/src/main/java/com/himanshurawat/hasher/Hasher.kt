@@ -64,7 +64,6 @@ class Hasher {
                 return SHA_512
             }
 
-
         }
 
         return MD5
