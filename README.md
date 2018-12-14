@@ -6,32 +6,21 @@ You can Easily Hash using MD5, SHA-1, SHA-256, SHA-384, or SHA-512 with ease.
 # How to Use
 In Java
 ```
-//Make Hasher Object
-Hasher ob = new Hasher();
 //Call hash() method using the object
-ob.hash(value,HashType);
+Hasher.hash(value,HashType);
 ```
 Example
-```
-~~ob.hash("Hello",HashType.SHA_1);~~
-This has been replaced with New Format 
-
-New Format 
-ob.hash("Hello",HashType.SHA_1);
+``` 
+Hasher.hash("Hello",HashType.SHA_1);
 
 ```
 It will return a SHA-1 Encoded String 
 
 In Kotlin
 
+
 ```
-val ob:Hasher = Hasher()
-```
-and use
-```
-~~ob.hash(value, HashType.SHA_512)~~
-The above code has been updated to
-ob.hash(value,HashType.SHA_512)
+Hasher.hash(value,HashType.SHA_512)
 ```
 
 # Download
