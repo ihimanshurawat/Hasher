@@ -29,9 +29,6 @@ val ob:Hasher = Hasher()
 ```
 and use
 ```
-//Default Hashing is MD5
-ob.hash(value)
-//With Two Arguments
 ~~ob.hash(value, HashType.SHA_512)~~
 The above code has been updated to
 ob.hash(value,HashType.SHA_512)
