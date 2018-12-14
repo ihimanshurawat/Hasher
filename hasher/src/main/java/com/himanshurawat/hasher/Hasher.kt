@@ -14,35 +14,39 @@ enum class HashType(s: String){
 
 class Hasher {
 
-    //Hashing
-    fun hash(value:String?,hashType: HashType): String {
+    companion object {
+        //Hashing
+        fun hash(value:String?,hashType: HashType): String {
 
-        if(value == null){
-            throw IllegalArgumentException("value in hash method cannot be Null")
-        }
-
-        try {
-            // Create Hash Type
-            val digest = java.security.MessageDigest
-                    .getInstance(hashType.value)
-            digest.update(value.toByteArray())
-            val messageDigest = digest.digest()
-
-            // Create Hex String
-            val hexString = StringBuilder()
-            for (aMessageDigest in messageDigest) {
-                var h = Integer.toHexString(0xFF and aMessageDigest.toInt())
-                while (h.length < 2)
-                    h = "0$h"
-                hexString.append(h)
+            if(value == null){
+                throw IllegalArgumentException("value in hash method cannot be Null")
             }
-            return hexString.toString()
 
-        } catch (e: NoSuchAlgorithmException) {
-            e.printStackTrace()
+            try {
+                // Create Hash Type
+                val digest = java.security.MessageDigest
+                        .getInstance(hashType.value)
+                digest.update(value.toByteArray())
+                val messageDigest = digest.digest()
+
+                // Create Hex String
+                val hexString = StringBuilder()
+                for (aMessageDigest in messageDigest) {
+                    var h = Integer.toHexString(0xFF and aMessageDigest.toInt())
+                    while (h.length < 2)
+                        h = "0$h"
+                    hexString.append(h)
+                }
+                return hexString.toString()
+
+            } catch (e: NoSuchAlgorithmException) {
+                e.printStackTrace()
+            }
+
+            return ""
         }
-
-        return ""
     }
+
+
 }
 
