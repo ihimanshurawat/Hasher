@@ -1,5 +1,6 @@
 package com.himanshurawat.hasher
 
+import java.lang.IllegalArgumentException
 import java.security.NoSuchAlgorithmException
 
 
@@ -14,7 +15,11 @@ enum class HashType(s: String){
 class Hasher {
 
     //Hashing
-    fun hash(value:String,hashType: HashType): String {
+    fun hash(value:String?,hashType: HashType): String {
+
+        if(value == null){
+            throw IllegalArgumentException("value in hash method cannot be Null")
+        }
 
         try {
             // Create Hash Type
