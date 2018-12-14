@@ -9,10 +9,7 @@ In Java
 //Make Hasher Object
 Hasher ob = new Hasher();
 //Call hash() method using the object
-//Default is MD5
-ob.hash(value);
-//You can Specify Hashing Type in the Second Argument 
-ob.hash(value,type);
+ob.hash(value,HashType);
 ```
 Example
 ```
@@ -52,7 +49,7 @@ allprojects {
 ```
 At the Project build.gradle
 ```
-implementation 'com.github.1AboveAll:Hasher:-SNAPSHOT'
+implementation 'com.github.1AboveAll:Hasher:1.1'
 ```
   
   
