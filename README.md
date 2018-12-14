@@ -35,7 +35,7 @@ allprojects {
 ```
 At the Project build.gradle
 ```
-implementation 'com.github.1AboveAll:Hasher:1.1'
+implementation 'com.github.1AboveAll:Hasher:1.2'
 ```
   
   
