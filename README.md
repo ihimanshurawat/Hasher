@@ -11,7 +11,7 @@ Hasher.hash(value,HashType);
 ```
 Example
 ``` 
-Hasher.hash("Hello",HashType.SHA_1);
+Hasher.Companion.hash("Hello",HashType.SHA_1);
 
 ```
 It will return a SHA-1 Encoded String 
